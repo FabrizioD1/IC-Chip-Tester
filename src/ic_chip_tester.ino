@@ -765,6 +765,13 @@ int createTruthTable() {
     Serial.println(); // add a new line
   }
 
+  delayMicroseconds(TRUTH_TABLE_DELAY);
+
+  // shut off all input pins
+  for (size_t i = 0; i < inputs.size(); i++) {
+    digitalWrite(inputs.at(i), LOW);
+  }
+
   Serial.println();
 
   delay(TRUTH_TABLE_RETURN_DELAY); // delay before returning to the main menu
