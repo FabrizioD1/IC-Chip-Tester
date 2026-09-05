@@ -2,7 +2,7 @@
 An Arduino-based project which allows users to test IC chips by sending various discrete input combinations to the chip and generates a truth table from the resulting outputs.
 
 # Overview
-The project allows the user to configure Arduino pins to where certain pins are assigned to the input pins of a selected IC chip, and others are assigned to the output pins of that IC. After configuring the inputs and outputs, the Arduino runs every combination from 0 to $2^{n}-1$ in binary (where n in the number of assigned input pins) through the input pins, and the output of each combination is sampled. The input combinations and the sampled outputs are then put together in a truth table that verifies the behavior of the chosen IC chip.
+The project allows the user to configure Arduino pins to where certain pins are assigned to the input pins of a selected IC chip, and others are assigned to the output pins of that IC. After configuring the inputs and outputs, the Arduino runs every combination from 0 to $2^{n}-1$ in binary (where n in the number of assigned input pins) through the input pins, and the output of each combination is sampled. The input combinations and the sampled outputs are then put together in a truth table that verifies the behavior of the chosen IC chip. Note that this design is intended for combinational components, not sequential.
 
 # Features
 - Ability to adjust input/output pins through the Arduino terminal
